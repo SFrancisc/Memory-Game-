@@ -1,0 +1,25 @@
+﻿<Window x:Class="Memory.DifficultyLevelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory"
+        mc:Ignorable="d"
+        Title="DifficultyLevelWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Button x:Name="btn_Easy" Content="Easy" Width="100" Height="40" FontSize="20" Click="btn_Easy_Click"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button x:Name="tbn_Medium" Content="Medium" Width="100" Height="40" FontSize="20" Click="tbn_Medium_Click"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button x:Name="btn_Hard" Content="Hard" Width="100" Height="40" FontSize="20" Click="btn_Hard_Click"/>
+        </Grid>
+    </Grid>
+</Window>

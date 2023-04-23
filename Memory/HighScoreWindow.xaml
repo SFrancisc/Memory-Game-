@@ -1,0 +1,33 @@
+﻿<Window x:Class="Memory.HighScoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory"
+        mc:Ignorable="d"
+        Title="HighScoreWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="Ranking" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ListView x:Name="lstRanking">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="ID" Width="200"  DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Best time" Width="200" DisplayMemberBinding="{Binding BestTime}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button x:Name="btn_Back" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Click="btn_Back_Click"/>
+        </Grid>
+    </Grid>
+</Window>

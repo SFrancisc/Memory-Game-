@@ -1,0 +1,39 @@
+﻿<Window x:Class="Memory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory"
+        mc:Ignorable="d"
+        Title="Memory" Height="350" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="Memory" HorizontalAlignment="Center" Margin="0 50 0 0" FontSize="25"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <Label Content="ID" HorizontalAlignment="Left"  FontSize="15" Margin="50 0 10 0"/>
+                    <TextBox x:Name="txtID" Width="200" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 5 0 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <Label Content="Password" HorizontalAlignment="Left"  FontSize="15" Margin="5 0 10 0"/>
+                    <PasswordBox x:Name="txtPassword" Width="200" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 5 0 0" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Button x:Name="btnLogin" Content="Login" Height="25" Width="100" HorizontalAlignment="Left" FontSize="15" Click="btnLogin_Click"/>
+                <TextBlock Margin="10 2 0 0" HorizontalAlignment="Right">
+                    <Hyperlink x:Name="link_SignUp" Click="link_SignUp_Click" FontSize="15">Sign up</Hyperlink>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
